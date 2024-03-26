@@ -968,7 +968,7 @@ namespace WeifenLuo.WinFormsUI.Docking
             {
                 IsHidden = true;	// to reduce the screen flicker
                 FloatPane = DockPanel.Theme.Extender.DockPaneFactory.CreateDockPane(Content, DockState.Float, false);
-                FloatPane.FloatWindow.StartPosition = FormStartPosition.Manual;
+                FloatPane.FloatWindow.StartPosition = m_form.StartPosition;
             }
 
             FloatPane.FloatWindow.Bounds = floatWindowBounds;
