@@ -969,7 +969,12 @@ namespace WeifenLuo.WinFormsUI.Docking
                 IsHidden = true;	// to reduce the screen flicker
                 FloatPane = DockPanel.Theme.Extender.DockPaneFactory.CreateDockPane(Content, DockState.Float, false);
                 FloatPane.FloatWindow.StartPosition = m_form.StartPosition; // GR
-                FloatPane.FloatWindow.MinimumSize = m_form.MinimumSize; // GR
+                //FloatPane.FloatWindow.MinimumSize = m_form.MinimumSize; // GR
+                // https://github.com/dockpanelsuite/dockpanelsuite/issues/63#issuecomment-8689696
+                var ncWidth = FloatPane.FloatWindow.Width - FloatPane.FloatWindow.ClientSize.Width;
+                var ncHeight = FloatPane.FloatWindow.Height - FloatPane.FloatWindow.ClientSize.Height;
+                FloatPane.FloatWindow.MinimumSize = new Size(m_form.MinimumSize.Width + ncWidth,
+                                             m_form.MinimumSize.Height + ncHeight);
             }
 
             FloatPane.FloatWindow.Bounds = floatWindowBounds;
