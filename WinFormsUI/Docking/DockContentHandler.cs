@@ -878,7 +878,7 @@ namespace WeifenLuo.WinFormsUI.Docking
             {
                 Form.Focus();
             }
-
+            
             // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             // Workaround of .Net Framework bug:
             // Change the parent of a control with focus may result in the first
@@ -968,11 +968,13 @@ namespace WeifenLuo.WinFormsUI.Docking
             {
                 IsHidden = true;	// to reduce the screen flicker
                 FloatPane = DockPanel.Theme.Extender.DockPaneFactory.CreateDockPane(Content, DockState.Float, false);
-                FloatPane.FloatWindow.StartPosition = m_form.StartPosition;
+                FloatPane.FloatWindow.StartPosition = m_form.StartPosition; // GR
+                FloatPane.FloatWindow.MinimumSize = m_form.MinimumSize; // GR
             }
 
             FloatPane.FloatWindow.Bounds = floatWindowBounds;
-
+            // FloatPane.Size  = floatWindowBounds.Size; // GR
+            
             Show(dockPanel, DockState.Float);
             Activate();
 

@@ -19,9 +19,9 @@ namespace WeifenLuo.WinFormsUI.ThemeVS2015
             {
                 UseGlassOnMenuStrip = false,
             };
-            Measures.SplitterSize = 6;
+            Measures.SplitterSize = 5;
             Measures.AutoHideSplitterSize = 3;
-            Measures.DockPadding = 6;
+            Measures.DockPadding = 3;
             ShowAutoHideContentOnHover = false;
             Extender.AutoHideStripFactory = new VS2012AutoHideStripFactory();
             Extender.AutoHideWindowFactory = new VS2012AutoHideWindowFactory();
