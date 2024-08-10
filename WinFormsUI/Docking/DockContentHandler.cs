@@ -981,7 +981,7 @@ namespace WeifenLuo.WinFormsUI.Docking
 
             FloatPane.FloatWindow.Bounds = floatWindowBounds;
             // FloatPane.Size  = floatWindowBounds.Size; // GR
-            
+            FloatPane.FloatWindow.Name = m_form.Name; // GR name to track the form
             Show(dockPanel, DockState.Float);
             Activate();
 
