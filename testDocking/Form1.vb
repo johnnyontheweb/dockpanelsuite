@@ -20,7 +20,7 @@ Public Class Form1
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         'Form2.Show(Me)
-        Dim dockContent As New WeifenLuo.WinFormsUI.Docking.DockContent With {.Text = "Window" & dockPanel.DocumentsCount + 1}
+        Dim dockContent As New WeifenLuo.WinFormsUI.Docking.DockContent
         dockContent.Show(dockPanel, dockState:=Docking.DockState.Document)
     End Sub
 End Class

@@ -1,6 +1,6 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class Form2
-    Inherits System.Windows.Forms.Form ' WeifenLuo.WinFormsUI.Docking.DockContent '
+    Inherits WeifenLuo.WinFormsUI.Docking.DockContent ' System.Windows.Forms.Form
 
     'Form esegue l'override del metodo Dispose per pulire l'elenco dei componenti.
     <System.Diagnostics.DebuggerNonUserCode()> _
