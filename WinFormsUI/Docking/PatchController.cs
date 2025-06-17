@@ -35,7 +35,7 @@ namespace WeifenLuo.WinFormsUI.Docking
                 {
                     return _highDpi = EnableAll;
                 }
-#if NET35 || NET40
+#if NET48
                 var section = ConfigurationManager.GetSection("dockPanelSuite") as PatchSection;
                 if (section != null)
                 {
@@ -115,7 +115,7 @@ namespace WeifenLuo.WinFormsUI.Docking
                 {
                     return _memoryLeakFix = EnableAll;
                 }
-#if NET35 || NET40
+#if NET48
                 var section = ConfigurationManager.GetSection("dockPanelSuite") as PatchSection;
                 if (section != null)
                 {
@@ -193,7 +193,7 @@ namespace WeifenLuo.WinFormsUI.Docking
                 {
                     return _focusLostFix = EnableAll;
                 }
-#if NET35 || NET40
+#if NET48
                 var section = ConfigurationManager.GetSection("dockPanelSuite") as PatchSection;
                 if (section != null)
                 {
@@ -271,7 +271,7 @@ namespace WeifenLuo.WinFormsUI.Docking
                 {
                     return _nestedDisposalFix = EnableAll;
                 }
-#if NET35 || NET40
+#if NET48
                 var section = ConfigurationManager.GetSection("dockPanelSuite") as PatchSection;
                 if (section != null)
                 {
@@ -349,7 +349,7 @@ namespace WeifenLuo.WinFormsUI.Docking
                 {
                     return _fontInheritanceFix = EnableAll;
                 }
-#if NET35 || NET40
+#if NET48
                 var section = ConfigurationManager.GetSection("dockPanelSuite") as PatchSection;
                 if (section != null)
                 {
@@ -427,7 +427,7 @@ namespace WeifenLuo.WinFormsUI.Docking
                 {
                     return _contentOrderFix = EnableAll;
                 }
-#if NET35 || NET40
+#if NET48
                 var section = ConfigurationManager.GetSection("dockPanelSuite") as PatchSection;
                 if (section != null)
                 {
@@ -505,7 +505,7 @@ namespace WeifenLuo.WinFormsUI.Docking
                 {
                     return _activeXFix = EnableAll;
                 }
-#if NET35 || NET40
+#if NET48
                 var section = ConfigurationManager.GetSection("dockPanelSuite") as PatchSection;
                 if (section != null)
                 {
@@ -583,7 +583,7 @@ namespace WeifenLuo.WinFormsUI.Docking
                 {
                     return _displayingPaneFix = EnableAll;
                 }
-#if NET35 || NET40
+#if NET48
                 var section = ConfigurationManager.GetSection("dockPanelSuite") as PatchSection;
                 if (section != null)
                 {
@@ -661,7 +661,7 @@ namespace WeifenLuo.WinFormsUI.Docking
                 {
                     return _activeControlFix = EnableAll;
                 }
-#if NET35 || NET40
+#if NET48
                 var section = ConfigurationManager.GetSection("dockPanelSuite") as PatchSection;
                 if (section != null)
                 {
@@ -739,7 +739,7 @@ namespace WeifenLuo.WinFormsUI.Docking
                 {
                     return _floatSplitterFix = EnableAll;
                 }
-#if NET35 || NET40
+#if NET48
                 var section = ConfigurationManager.GetSection("dockPanelSuite") as PatchSection;
                 if (section != null)
                 {
@@ -817,7 +817,7 @@ namespace WeifenLuo.WinFormsUI.Docking
                 {
                     return _activateOnDockFix = EnableAll;
                 }
-#if NET35 || NET40
+#if NET48
                 var section = ConfigurationManager.GetSection("dockPanelSuite") as PatchSection;
                 if (section != null)
                 {
@@ -895,7 +895,7 @@ namespace WeifenLuo.WinFormsUI.Docking
                 {
                     return _selectClosestOnClose = EnableAll;
                 }
-#if NET35 || NET40
+#if NET48
                 var section = ConfigurationManager.GetSection("dockPanelSuite") as PatchSection;
                 if (section != null)
                 {
@@ -973,7 +973,7 @@ namespace WeifenLuo.WinFormsUI.Docking
                 {
                     return _perScreenDpi = EnableAll;
                 }
-#if NET35 || NET40
+#if NET48
                 var section = ConfigurationManager.GetSection("dockPanelSuite") as PatchSection;
                 if (section != null)
                 {

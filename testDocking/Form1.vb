@@ -20,7 +20,10 @@ Public Class Form1
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         'Form2.Show(Me)
-        Dim dockContent As New WeifenLuo.WinFormsUI.Docking.DockContent
-        dockContent.Show(dockPanel, dockState:=Docking.DockState.Document)
+        Dim dockContent As New WeifenLuo.WinFormsUI.Docking.DockContent With {.Text = "Window" & dockPanel.DocumentsCount + 1, .MaximizeBox = True, .MinimizeBox = True}
+        'dockContent.Show(dockPanel, dockState:=Docking.DockState.Float)
+        dockContent.CloseButton = True : dockContent.CloseButtonVisible = True
+
+        dockContent.Show(dockPanel, dockContent.Bounds)
     End Sub
 End Class

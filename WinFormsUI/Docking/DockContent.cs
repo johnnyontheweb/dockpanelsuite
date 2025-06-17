@@ -193,7 +193,7 @@ namespace WeifenLuo.WinFormsUI.Docking
             return DockHandler.IsDockStateValid(dockState);
         }
 
-#if NET35 || NET40
+#if NET48
         /// <summary>
         /// Context menu.
         /// </summary>

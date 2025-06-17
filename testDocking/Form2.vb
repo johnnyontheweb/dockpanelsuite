@@ -1,4 +1,7 @@
-﻿Public Class Form2
+﻿Imports WeifenLuo.WinFormsUI
+Imports WeifenLuo.WinFormsUI.Docking
+
+Public Class Form2
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub

@@ -726,7 +726,7 @@ namespace WeifenLuo.WinFormsUI.Docking
             else
                 return DockHelper.IsDockStateValid(dockState, DockAreas);
         }
-#if NET35 || NET40
+#if NET48
         public ContextMenu TabPageContextMenu { get; set; }
 #endif
         public string ToolTipText { get; set; }
@@ -970,6 +970,9 @@ namespace WeifenLuo.WinFormsUI.Docking
                 FloatPane = DockPanel.Theme.Extender.DockPaneFactory.CreateDockPane(Content, DockState.Float, false);
                 FloatPane.FloatWindow.StartPosition = m_form.StartPosition; // GR
                 FloatPane.FloatWindow.MinimumSize = m_form.MinimumSize; // GR
+                FloatPane.FloatWindow.MinimizeBox = false; //m_form.MinimizeBox; // GR
+                FloatPane.FloatWindow.MaximizeBox = m_form.MaximizeBox ; // GR
+                FloatPane.FloatWindow.DoubleClickTitleBarToDock = false; // GR
                 // https://github.com/dockpanelsuite/dockpanelsuite/issues/63#issuecomment-8689696
                 var ncWidth =  FloatPane.FloatWindow.Width - FloatPane.FloatWindow.ClientSize.Width;
                 var ncHeight =  FloatPane.FloatWindow.Height - FloatPane.FloatWindow.ClientSize.Height;

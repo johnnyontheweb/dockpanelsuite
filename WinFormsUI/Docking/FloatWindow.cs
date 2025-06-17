@@ -28,7 +28,8 @@ namespace WeifenLuo.WinFormsUI.Docking
 
             m_nestedPanes = new NestedPaneCollection(this);
 
-            FormBorderStyle = FormBorderStyle.SizableToolWindow;
+            //FormBorderStyle = FormBorderStyle.SizableToolWindow; // GR
+            FormBorderStyle = FormBorderStyle.Sizable;
             ShowInTaskbar = false;
             if (dockPanel.RightToLeft != RightToLeft)
                 RightToLeft = dockPanel.RightToLeft;
@@ -244,13 +245,13 @@ namespace WeifenLuo.WinFormsUI.Docking
                         }
                     }
                     return;
-                case (int)Win32.Msgs.WM_NCLBUTTONDBLCLK:
+                case (int)Win32.Msgs.WM_NCLBUTTONDBLCLK: // DoubleClickTitleBarToDock
                     {
                         uint result = !DoubleClickTitleBarToDock || Win32Helper.IsRunningOnMono 
                             ? Win32Helper.HitTestCaption(this)
                             : NativeMethods.SendMessage(this.Handle, (int)Win32.Msgs.WM_NCHITTEST, 0, (uint)m.LParam);
 
-                        if (result != 2)	// HITTEST_CAPTION
+                        if (result != 2 || !DoubleClickTitleBarToDock)	// HITTEST_CAPTION // GR
                         {
                             base.WndProc(ref m);
                             return;

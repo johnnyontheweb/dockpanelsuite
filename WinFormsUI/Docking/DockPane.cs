@@ -250,7 +250,7 @@ namespace WeifenLuo.WinFormsUI.Docking
 
                 if (content.DockHandler.TabPageContextMenuStrip != null)
                     return content.DockHandler.TabPageContextMenuStrip;
-#if NET35 || NET40
+#if NET48
                 else if (content.DockHandler.TabPageContextMenu != null)
                     return content.DockHandler.TabPageContextMenu;
 #endif
@@ -277,7 +277,7 @@ namespace WeifenLuo.WinFormsUI.Docking
                 contextMenuStrip.Show(control, position);
                 return;
             }
-#if NET35 || NET40
+#if NET48
             ContextMenu contextMenu = menu as ContextMenu;
             if (contextMenu != null)
                 contextMenu.Show(this, position);
